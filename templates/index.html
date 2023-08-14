@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Recommendation System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="icon" href="img/icon1.png">
+<!-- <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:300,500&amp;display=swap'> -->
+<link rel="stylesheet" href="/styles/style.css">
+
+<style>
+body{
+  background-image: url('webpic.jpg');
+}
+  
+:root{
+      background-color: #211e1e;
+      background-image: url('webpic.jpg');
+    }
+
+    div {
+      margin-top: 15vh;
+      font-family: "Poppins", sans-serif;
+      font-weight: 150;
+      font-size: 100%;
+      background-color: #3c486f;
+      padding: 20px;
+      line-height: 1.5;
+      color: #000;
+      margin-left: 20%;
+      margin-right: 20%;
+      border-radius: 200px;
+      background-image: url('webpic.jpg');
+    }
+    a {
+      text-decoration: none;
+    }
+    
+    .movie{
+        display: block;
+        text-align: center;
+    }
+    #movie_name{
+        width: 70%;
+        padding: 0.5em;
+        border-radius: 50px;
+        text-align: center;
+        border: 1px solid grey;
+    }
+    #submission_button{
+        width: 25%;
+        padding: 1em;
+        margin: 1em;
+        border-radius: 50px;
+        color: white;
+        background-color:rgb(2, 45, 89);
+        border-style: none;
+    }
+    h2{
+      text-align: center;
+    }
+
+    #back_btn{
+    width: 20%;
+    padding: 1em;
+    margin-left: 20em;
+    margin-top: 1em;
+    border-radius: 50px;
+    color: white;
+    background-color:rgb(2, 45, 89);
+    border-style: none;
+}
+
+
+</style>
+
+</head>
+<br><br><br><br><br><br>
+<body style="background-image: url('webpic.jpg');">
+
+  <button id="back_btn" onClick='window.location="http://localhost/IWP%20Project/Suriya_flix/index.php"'>Back to Home Page</button>
+    <div class="movie">
+        <form action="{{ url_for('main') }}" method="POST">
+
+          <h2 style="color: black;" >Suriya_flix Movie Recommendation System</h2>
+   
+          <!-- favorite movie name -->
+
+          <label for="movie"><p style="color: black;font-weight: bolder;">Enter your favorite movie name: </p></label>
+          <input type="text" id="movie_name" name="movie_name" placeholder="Enter favorite movie name" autocorrect="off" autocapitalize="off" required />
+          
+          <!-- buttons -->
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" id="submission_button" value="Submit"/>
+            <input type="reset" id="submission_button" value="Reset"/>
+        </form>
+  </div>
+  <script src='https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js'></script>
+
+</body>
+</html>
